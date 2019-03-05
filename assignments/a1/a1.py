@@ -45,9 +45,9 @@ def get_idf(text_collection, template):
                  number of documents that contain t
 
     >>> get_idf(gutenberg_collection, ['emma', 'my', 'sam'])
-    [2.1972245773362196, 0.0, 2.8903717578961645]
+    [0.9542425094393249, 0.0, 1.255272505103306]
     >>> get_idf(gutenberg_collection, ['unto', 'lord', 'thou'])
-    [1.0986122886681098, 0.1823215567939546, 0.32542240043462795]
+    [0.47712125471966244, 0.07918124604762482, 0.1413291527964693]
     """
     return []
 
@@ -58,7 +58,7 @@ def get_tfidf(text_collection, list_documents, template):
     computed based on the words of the template. Again, make sure that all
     comparisons are not case sensitive.
     >>> get_tfidf(gutenberg_collection, gutenberg_collection[:2], ['unto', 'lord', 'thou'])
-    [[0.0, 1.0939293407637276, 0.32542240043462795], [0.0, 1.6408940111455914, 0.0]]
+    [[0.0, 0.4750874762857489, 0.1413291527964693], [0.0, 0.7126312144286233, 0.0]]
     """
     return []
 
@@ -70,7 +70,7 @@ def cosine_similarity(text_collection, text1, text2, template):
     lectures:
 
                                 sum_i(text1_i*text2_i)
-    cos(text1, text2) = ----------------------------------------------y
+    cos(text1, text2) = ----------------------------------------------
                         sqrt(sum_i(text1_i^2)) sqrt(sum_i(text2_i^2))
 
     You can implement the cosine similarity directly, or you can use a library such as sklearn:

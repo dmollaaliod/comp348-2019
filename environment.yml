@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.6
   - ipykernel
+  - tensorflow-gpu
   - keras-gpu
   - matplotlib
   - nltk
